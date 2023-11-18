@@ -1,0 +1,39 @@
+{
+  "name": "nuxt3-template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "nuxt prepare",
+    "check-updates": "npx npm-check-updates",
+    "update-dependencies": "npx npm-check-updates --configFileName ncurc.json"
+  },
+  "devDependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@element-plus/nuxt": "^1.0.6",
+    "@nuxtjs/color-mode": "^3.3.2",
+    "@pinia/nuxt": "^0.5.1",
+    "@typescript-eslint/eslint-plugin": "6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "@unocss/nuxt": "^0.57.5",
+    "@vueuse/core": "^9.13.0",
+    "@vueuse/nuxt": "^9.13.0",
+    "consola": "^3.2.3",
+    "eslint": "8.54.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "5.0.1",
+    "eslint-plugin-todo-ddl": "^1.1.1",
+    "eslint-plugin-vue": "9.18.1",
+    "nuxt": "3.8.1",
+    "pinia": "^2.1.7",
+    "prettier": "^3.1.0",
+    "sass": "^1.69.5",
+    "typescript": "^5.2.2"
+  }
+}
