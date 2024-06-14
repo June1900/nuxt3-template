@@ -39,8 +39,6 @@ pnpm-debug.log*
 !.yarn/versions
 .pnp.*
 
-# Vab
-public/video
 *.zip
 *.7z
 *.rar
@@ -48,4 +46,8 @@ public/video
 # lock文件
 yarn.lock
 package-lock.json
+
+# 自动生成文件
+auto-imports.d.ts
+components.d.ts
 

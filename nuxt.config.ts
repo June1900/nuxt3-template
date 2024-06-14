@@ -1,3 +1,7 @@
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -8,36 +12,29 @@ export default defineNuxtConfig({
     }
   },
   srcDir: 'src/',
-  modules: ['@pinia/nuxt', '@vueuse/nuxt', '@element-plus/nuxt', '@unocss/nuxt', '@nuxtjs/color-mode'],
-  // css
-  css: ['~/assets/styles/default.scss'],
-  // vueuse
+  modules: ['@pinia/nuxt', '@vueuse/nuxt', '@unocss/nuxt', '@nuxtjs/color-mode', 'nuxtjs-naive-ui'],
+  css: ['~/assets/css/normalize.css'],
   vueuse: {
     ssrHandlers: true
   },
-  // colorMode
   colorMode: {
     classSuffix: ''
   },
-  unocss: {
-    uno: true,
-    attributify: true,
-    icons: {
-      scale: 1.2
-    }
-  },
   vite: {
+    plugins: [
+      AutoImport({
+        resolvers: [NaiveUiResolver()]
+      }),
+      Components({
+        resolvers: [NaiveUiResolver()]
+      })
+    ],
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/assets/styles/element/index.scss" as element;'
+          // additionalData: '@use "@/assets/styles/element/index.scss" as element;'
         }
       }
     }
-  },
-  elementPlus: {
-    icon: 'ElIcon',
-    importStyle: 'scss',
-    themes: ['dark']
   }
 })

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   // 每个文件格式化的范围是文件的全部内容
   rangeStart: 0,
   rangeEnd: Infinity,
@@ -34,5 +34,5 @@ module.exports = {
   htmlWhitespaceSensitivity: 'ignore',
   vueIndentScriptAndStyle: false,
   // 换行符使用 lf
-  endOfLine: 'lf',
+  endOfLine: 'lf'
 }
