@@ -10,8 +10,12 @@
     <n-gradient-text :size="24" type="warning">Married with Children</n-gradient-text>
     <br />
     <n-gradient-text :size="24" type="success">Back in the USSR</n-gradient-text>
-    <Test/>
+    <Test />
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+definePageMeta({
+  layout: 'header'
+})
+</script>
